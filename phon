@@ -1,0 +1,10 @@
+import phonenumbers
+
+number = "+919724097000"
+from phonenumbers import geocoder as ga
+ch_number = phonenumbers.parse(number,"CH")
+print(ga.description_for_number(ch_number,"en"))
+
+from phonenumbers import carrier
+service_number = phonenumbers.parse(number,"RO")
+print(carrier.name_for_number(service_number,"en"))
